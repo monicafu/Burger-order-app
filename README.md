@@ -32,5 +32,16 @@ This project is a web-app for exercise React 16 and its new feature,like hooks.
 
 Burger order app can build your own burger, make an order and view your orders. 
 
-Backend database id firebase. 
+
+## `Backend database is firebase`
+
+configuration: 
+Select "Database" --- "Realtime Database" --- "Rules"
+
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
 
