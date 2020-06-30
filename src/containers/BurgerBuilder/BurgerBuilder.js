@@ -132,6 +132,7 @@ class BurgerBuilder extends Component {
     //         search: '?' + queryString
     //     });
 
+    //use redux store:
     this.props.history.push('/checkout');
   }
 
@@ -155,12 +156,12 @@ class BurgerBuilder extends Component {
                     disabled={disabledInfo}
                     purchasable={this.updatePurchaseState(this.props.ingredients)}
                     ordered={this.purchaseHandler}
-                    price={this.props.totalPrice} />
+                    price={this.props.price} />
             </Fragment>
         );
         orderSummary = <OrderSummary
             ingredients={this.props.ingredients}
-            price={this.props.totalPrice}
+            price={this.props.price}
             purchaseCancelled={this.purchaseCancelHandler}
             purchaseContinued={this.purchaseContinueHandler} />;
     }
@@ -180,7 +181,7 @@ class BurgerBuilder extends Component {
 
 const mapStateToProps = state => {
   return {
-      ings: state.ingredients,
+      ingredients: state.ingredients,
       price: state.totalPrice
   };
 }
