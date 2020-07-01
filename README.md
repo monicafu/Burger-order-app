@@ -21,7 +21,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-
+### `npm run build`
+build the app 
 
 ### `Udemy course ref`
 https://www.udemy.com/course/react-the-complete-guide-incl-redux
@@ -40,9 +41,17 @@ Select "Database" --- "Realtime Database" --- "Rules"
 
 ```
 {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
-    ".read": true,
-    ".write": true
+    "ingredients" : {
+      ".read": true,
+    	".write": true,
+    },
+    "orders" : {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["userId"]
+    }
   }
 }
 ```
