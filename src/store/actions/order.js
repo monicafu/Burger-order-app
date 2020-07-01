@@ -1,6 +1,5 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios-orders';
-import { useReducer, useImperativeHandle } from 'react';
 
 //purchase process 
 export const purchaseBurgerSuccess = ( id, orderData ) => {
