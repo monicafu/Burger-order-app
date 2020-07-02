@@ -32,5 +32,5 @@ const app = (
     </Provider>
 );
 
-ReactDOM.render( app, document.getElementById( 'root' ) );
+ReactDOM.render(app, document.getElementById('root'));
 registerServiceWorker();
